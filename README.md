@@ -110,7 +110,15 @@ YooChat is an ongoing project, and we have exciting plans for its future develop
 |---------|---------|
 | ![image3](https://github.com/hamzadevlpr/chat-app-mern-stack/assets/99534215/3ab82310-b8ef-41c3-aacd-5ab948cb01cf) | ![image4](https://github.com/hamzadevlpr/chat-app-mern-stack/assets/99534215/1931e5de-bbb5-4353-9b3a-b07b33f8a7e2) |
 
-
+## Deployed URLS: 
+* Client
+```
+https://mern-chat-app-fawn-theta.vercel.app/
+```
+* Server
+```
+https://mern-yoochat-app.onrender.com/
+```
 
 
 ## Contributing 🤝
