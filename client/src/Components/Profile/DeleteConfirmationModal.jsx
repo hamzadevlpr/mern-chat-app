@@ -40,7 +40,7 @@ function DeleteConfirmationModal({ isOpen, onClose, onDelete }) {
                                     className="text-lg leading-6 font-medium text-gray-900"
                                     id="modal-headline"
                                 >
-                                    Delete Product
+                                    Delete you account
                                 </h3>
                                 <div className="mt-2">
                                     <p className="text-sm text-gray-500">
