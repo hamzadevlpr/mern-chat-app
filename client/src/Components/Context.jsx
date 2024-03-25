@@ -11,6 +11,7 @@ const ContextProvider = ({ children }) => {
     const [forgetPassModal, setForgetPassModel] = useState(false);
     const [selectedChatId, setSelectedChatId] = useState(null);
     const [chats, setChats] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         localStorage.setItem('selectedChatId', selectedChatId);
@@ -24,7 +25,7 @@ const ContextProvider = ({ children }) => {
             selectedChatId, setSelectedChatId,
             chats, setChats,
             chatInfoOpen, setChatInfoOpen,
-
+            menuOpen, setMenuOpen
         }}>
             {children}
         </Context.Provider>

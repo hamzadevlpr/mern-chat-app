@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Paperclip, SmilePlus, SendHorizontal } from 'lucide-react';
+import { Paperclip, SmilePlus, SendHorizontal, Menu } from 'lucide-react';
 import ChatBar from './ChatBar';
 import axios from 'axios';
 import { Context } from '../Context';
@@ -14,8 +14,7 @@ function ChatInterface() {
     const [inputMessage, setInputMessage] = useState("");
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
-    const { chatInfoOpen, selectedChatId, setChatInfoOpen } = useContext(Context);
-    // console.log(selectedChatId);
+    const { chatInfoOpen, selectedChatId, setMenuOpen, menuOpen } = useContext(Context);
 
     useEffect(() => {
         setMessages([]);
@@ -69,6 +68,11 @@ function ChatInterface() {
 
     return (
         <>
+            <div className="absolute left-2 top-2 sm:hidden block">
+                <button onClick={() => setMenuOpen(!menuOpen)}>
+                    <Menu />
+                </button>
+            </div>
             {chatInfoOpen && (
                 <ChatInfo title={selectedChatId.name} userIcon={selectedChatId.userIcon} about={selectedChatId.about} joiningData={selectedChatId.createdAt} />
             )}

@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-input{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+input {
     @apply text-sm flex w-full border rounded-md focus:outline-none focus:border-indigo-500 pl-4 h-10 border-indigo-300
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -39,12 +48,23 @@ input[type=number] {
     border-radius: 10px;
     border: 3px solid #ffffff;
 }
+
 .alert-popup {
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
-  }
+}
 
-  .hide {
+.hide {
     opacity: 0;
     pointer-events: none;
-  }
+}
+
+.item-name {
+    display: inline-block;
+}
+
+@media screen and (max-width: 450px) {
+    .item-name {
+        display: none;
+    }
+}

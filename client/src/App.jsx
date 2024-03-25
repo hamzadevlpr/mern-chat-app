@@ -11,6 +11,7 @@ import ErrorPages from './ErrorPages';
 import axios from 'axios';
 import { CHECK_URL } from './config';
 import AlertPopup from './Components/AlertPopup';
+import MobileSidebar from './Components/MobileSidebar/MobileSidebar';
 
 function App() {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -24,7 +25,7 @@ function App() {
     const checkUrlValidity = async () => {
       try {
         toast.promise(
-          axios.get(`${CHECK_URL}/?url=https://yoochat.onrender.com/`),
+          axios.get(`${CHECK_URL}`),
           {
             loading: 'Checking Server...',
             success: <span>Hurry! Server is Live!</span>,
@@ -77,8 +78,9 @@ function App() {
         <Route path="/new-password/:id/:token" element={<NewPassword />} />
         <Route path="/new-password" element={user ? <MainLayout /> : <Navigate to="/login" />} />
       </Routes>
-      {/* {showPopup && <AlertPopup />} */}
+      {showPopup && <AlertPopup />}
       <Toaster />
+    
     </>
   );
 }
